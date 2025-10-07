@@ -4,6 +4,11 @@
 .idea/
 *.iml
 .DS_Store
+
 # エディターベースの HTTP クライアントリクエスト
 /httpRequests/
+
+# Gradle build
+.gradle/
+build/
 

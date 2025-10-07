@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application' // 任意：mainを実行したい場合
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17) // 必要に応じて11や21に変更
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+application {
+    // 実行したい main クラスを指定（例: effectivejava.item01.Item01Demo）
+    mainClass = 'effectivejava.item01.Item01Demo'
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
